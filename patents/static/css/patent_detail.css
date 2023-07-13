@@ -1,0 +1,22 @@
+#particles-js {
+    display: none;
+}
+
+.patent-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.patent-details .left-section {
+  flex: 0 0 50%;
+  padding-right: 20px;
+}
+
+.patent-details .right-section {
+  flex: 0 0 50%;
+}
+
+#graph-container {
+  height: 400px;
+}

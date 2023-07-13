@@ -1,0 +1,37 @@
+Metadata-Version: 2.0
+Name: arangodb
+Version: 0.0.12
+Summary: A Python client for ArangoDB REST API.
+Home-page: https://github.com/diefans/python-arangodb
+Author: Oliver Berger
+Author-email: diefans@gmail.com
+License: Apache License Version 2.0
+Keywords: ArangoDB REST API Requests graph nosql database AQL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Database
+Requires-Dist: requests
+
+arangodb
+========
+
+Objective
+---------
+
+There are a couple of Python implementations for ArangoDB's rest API, but they
+do not fit my mind:
+
+* Have a declarative way of defining documents, Edges and Graphs.
+* Have a clean separation of client API and ArangoDB API.
+* Documents should be optionally de/serializable when loading or saving.
+* The API client may differ for a special Document.
+* Documents should behave like dicts.
+* Have a nice query tool.
+* Have ArangoDB errors thrown as exceptions.
+* Use requests Session with keep-alive.
+
+
+
+

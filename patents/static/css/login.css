@@ -1,0 +1,41 @@
+#particles-js {
+    display: none;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  form {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 15px;
+    align-items: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 110px;
+  }
+  

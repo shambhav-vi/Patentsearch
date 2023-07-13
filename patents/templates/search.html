@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  #particles-js {
+      display: none;
+  }
+</style>
+  <h1>Search Patents</h1>
+  <form action="{% url 'search' %}" method="GET">
+    <input type="text" name="query" id="search-bar" placeholder="Search by name or author">
+    <div id="suggestions"></div>
+    <button type="submit">Search</button>
+  </form>
+
+  {% if patents %}
+    <h2>Search Results</h2>
+    <ul>
+      {% for patent in patents %}
+        <li id="patent-{{ patent.id }}">
+          <h3>{{ patent.title }}</h3>
+          <p>{{ patent.inventor }}</p>
+          <button class="view-details-btn" data-link="{{ patent.link }}?query={{ query }}" data-patent-id="{{ patent.patent_id }}">
+            View Details
+        </button>        
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No patents found.</p>
+  {% endif %}
+
+  <div id="details-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="details-title"></h2>
+      <p id="details-inventor"></p>
+      <p id="details-abstract"></p>
+    </div>
+  </div>
+
+  <script src="{% static 'js/fetch_details.js' %}"></script>
+{% endblock %}

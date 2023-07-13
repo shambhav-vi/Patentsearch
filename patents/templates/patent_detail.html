@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/patent_detail.css' %}">
+
+<div class="patent-details">
+  <div class="left-section">
+    <h1>Patent Details</h1>
+    {% if patent_details %}
+    <h2>Title: {{ patent_details.title }}</h2>
+    <p>Inventor: {{ patent_details.inventor }}</p>
+    <p>Abstract: {{ patent_details.summary }}</p>
+    {% else %}
+    <p>No details found for the specified patent.</p>
+    {% endif %}
+  </div>
+
+  <div class="right-section">
+    <h2>Graph Visualization</h2>
+    <div id="graph-container">
+      <svg id="graph-svg"></svg>
+    </div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="{% static 'js/graph.js' %}" data-graph="{{ graph_json }}"></script>
+
+{% endblock %}
